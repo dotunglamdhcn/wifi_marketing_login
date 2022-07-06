@@ -10,8 +10,8 @@ $dotenv->load();
 include 'parameters.php';
 
 $_SESSION["user_type"] = "new";
-// $_SESSION["mac"] = $_GET["id"];
-// $_SESSION["ap"] = $_GET["ap"];
+$_SESSION["mac"] = $_GET["id"];
+$_SESSION["ap"] = $_GET["ap"];
 
 /*
 Checking DB to see if user exists or not.
@@ -28,7 +28,7 @@ if (mysqli_connect_errno()) {
   echo "Failed to connect to SQL: " . mysqli_connect_error();
 }
 
-// $result = mysqli_query($con, "SELECT * FROM `$table_name` WHERE mac='$_SESSION[mac]'");
+$result = mysqli_query($con, "SELECT * FROM `$table_name` WHERE mac='$_SESSION[mac]'");
 
 // if ($result->num_rows >= 1) {
 //   $row = mysqli_fetch_array($result);
@@ -111,7 +111,7 @@ mysqli_close($con);
                         
     </form>
 
-    <div id="powered" class="content is-size-6">Latitude 38 Vacation Rentals</div>
+    <div id="powered" class="content is-size-6">Aliviet company</div>
     <div id="copyright" class="content is-size-6">(C) Copyright 2021</div>
 
   </div>
